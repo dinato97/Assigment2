@@ -18,10 +18,8 @@ public class Bill implements RestaurantBill {
 
 		for(MenuItem m : pezzi) {
 				totale += m.GetPrezzo();
-			}
+		}
 		
-		if(totale > 100)
-			totale *= 0.95;
 		
 		return totale;
 		
