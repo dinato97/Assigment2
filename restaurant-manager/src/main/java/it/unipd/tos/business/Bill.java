@@ -17,10 +17,24 @@ public class Bill implements RestaurantBill {
 		if(pezzi.size() > 20)
 			throw new RestaurantBillException("+ di 20 elementi");
 		
+		long numPizze = pezzi.stream().filter(a -> a.GetTipo().equals(MenuItem.itemType.PIZZA)).count();
 		
-
-		for(MenuItem m : pezzi) {
+		if(numPizze > 10) {
+			double min = pezzi.get(0).GetPrezzo();
+			
+			for(MenuItem m : pezzi) {
 				totale += m.GetPrezzo();
+				if(m.GetPrezzo() < min)
+					min = m.GetPrezzo();
+			}
+			
+			totale -= min;
+			
+		}
+		else {
+			for(MenuItem m : pezzi) {
+				totale += m.GetPrezzo();
+			}
 		}
 		
 		if(totale > 100)

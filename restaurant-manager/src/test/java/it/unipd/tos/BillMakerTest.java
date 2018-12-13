@@ -35,6 +35,29 @@ public class BillMakerTest{
 		 }
 	 }
 	 
+	 public void getOrderBillOver10Pizze() {
+		 try {
+			 List<MenuItem> conto = new ArrayList<MenuItem>();
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"marinara",3.5));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"capricciosa",6));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"pugliese",6));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"capricciosa",6));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"misto funghi",7.5));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"patatine",6));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"margherita",4));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"4 formaggi",6.5));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"diavola",5.5));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"parmigiana",6.5));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"misto mare",11));
+			 
+			 Bill b = new Bill();
+			 
+			 assertEquals(b.getBill(conto), 65);
+		 }
+		 catch(RestaurantBillException e){
+			 System.out.println(e.getMessage());
+		 }
+	 }
 	 
 	 public void getOrderBillOver100Euro() {
 		 try {
