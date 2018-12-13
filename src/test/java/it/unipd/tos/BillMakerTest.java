@@ -28,7 +28,7 @@ public class BillMakerTest{
 			 
 			 Bill b = new Bill();
 			 
-			 assertEquals(b.getBill(conto), 31);
+			 assertEquals(b.getOrderPrice(conto), 31);
 		 }
 		 catch(RestaurantBillException e){
 			 System.out.println(e.getMessage());
@@ -52,7 +52,7 @@ public class BillMakerTest{
 			 
 			 Bill b = new Bill();
 			 
-			 assertEquals(b.getBill(conto), 65);
+			 assertEquals(b.getOrderPrice(conto), 65);
 		 }
 		 catch(RestaurantBillException e){
 			 System.out.println(e.getMessage());
@@ -76,7 +76,7 @@ public class BillMakerTest{
 			 
 			 Bill b = new Bill();
 			 
-			 assertEquals(b.getBill(conto), 123.025);
+			 assertEquals(b.getOrderPrice(conto), 123.025);
 		 }
 		 catch(RestaurantBillException e){
 			 System.out.println(e.getMessage());
