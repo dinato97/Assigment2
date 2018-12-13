@@ -14,6 +14,9 @@ public class Bill implements RestaurantBill {
 		
 		double totale = 0;
 		
+		if(pezzi.size() > 20)
+			throw new RestaurantBillException("+ di 20 elementi");
+		
 		
 
 		for(MenuItem m : pezzi) {
