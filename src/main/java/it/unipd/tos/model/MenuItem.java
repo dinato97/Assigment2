@@ -5,7 +5,7 @@
 package it.unipd.tos.model;
 
 public class MenuItem {
-	
+
 	public enum itemType{
 		PRIMO, PIZZA
 	}
