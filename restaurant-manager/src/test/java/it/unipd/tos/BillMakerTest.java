@@ -60,5 +60,41 @@ public class BillMakerTest{
 		 }
 	 }
 	
+	@org.junit.Test
+	public void getOrderBillOver20Element() {
+		try {
+			List<MenuItem> conto = new ArrayList<MenuItem>();
+
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"marinara",3.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"capricciosa",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"pugliese",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"capricciosa",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"misto funghi",7.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"patatine",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"margherita",4));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"4 formaggi",6.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"diavola",5.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"parmigiana",6.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"marinara",3.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"capricciosa",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"pugliese",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"capricciosa",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"misto funghi",7.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"patatine",6));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"margherita",4));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"margherita",4));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"4 formaggi",6.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"diavola",5.5));
+			conto.add(new MenuItem(MenuItem.itemType.PIZZA,"parmigiana",6.5));
+
+			Bill b = new Bill();
+			double tot = b.getOrderPrice(conto);
+			exception.expect(RestaurantBillException.class);
+			exception.expectMessage("+ di 20 elementi");
+		}
+		catch(RestaurantBillException e){
+			System.out.println(e.getMessage());
+		}
+	
 	
 }
