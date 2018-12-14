@@ -67,7 +67,7 @@ public class BillMakerTest{
 			 List<MenuItem> conto = new ArrayList<MenuItem>();
 			 
 			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"4 formaggi",6.5));
-			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"diavola",5.5));
+			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"diavola",5));
 			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"parmigiana",6.5));
 			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"misto mare",11));
 			 conto.add(new MenuItem(MenuItem.itemType.PIZZA,"gourmet",20));
@@ -79,7 +79,7 @@ public class BillMakerTest{
 			 
 			 Bill b = new Bill();
              double tot = b.getOrderPrice(conto);
-			 assertEquals(123.025, tot, 0.0);
+			 assertEquals(122.55, tot, 0.0);
 		 }
 		 catch(RestaurantBillException e){
 			 System.out.println(e.getMessage());
