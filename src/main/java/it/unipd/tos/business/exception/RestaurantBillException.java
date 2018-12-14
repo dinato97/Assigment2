@@ -4,17 +4,30 @@
 
 package it.unipd.tos.business.exception;
 
-public class RestaurantBillException extends Throwable{
+<<<<<<<HEAD
 
-	private String message;
+public class RestaurantBillException extends Throwable {
 
-	public RestaurantBillException(String message) {
-		// TODO Auto-generated constructor stub
-		this.message = message;
-	}
+    private String message;
 
-	public String getMessage() {
-        return message;
-	}
+    public RestaurantBillException(String message) {
+        // TODO Auto-generated constructor stub
+        this.message = message;
+    }
 
-}
+    public String getMessage() {
+=======
+        public class RestaurantBillException extends Throwable {
+            private String message;
+
+            public RestaurantBillException(String message) {
+                // TODO Auto-generated constructor stub
+                this.message = message;
+            }
+
+            public String getMessage() {
+>>>>>>>5d 7ed 2 bbe3a7d4cb64eeb4d62a466e3bc5db8832
+                return message;
+            }
+
+        }
