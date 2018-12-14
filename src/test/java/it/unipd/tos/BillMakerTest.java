@@ -79,7 +79,7 @@ public class BillMakerTest{
 			 
 			 Bill b = new Bill();
              double tot = b.getOrderPrice(conto);
-			 assertEquals(129.5, tot, 0.0);
+			 assertEquals(123.025, tot, 0.0);
 		 }
 		 catch(RestaurantBillException e){
 			 System.out.println(e.getMessage());
