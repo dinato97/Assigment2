@@ -3,13 +3,18 @@
 ////////////////////////////////////////////////////////////////////
 
 package it.unipd.tos;
+
 import org.junit.Test;
+
 import static org.junit.Assert.*;
+
 import java.util.List;
+
 import it.unipd.tos.business.exception.RestaurantBillException;
 import it.unipd.tos.model.MenuItem;
 import it.unipd.tos.TestMenuItem;
 import it.unipd.tos.business.Bill;
+
 import java.util.ArrayList;
 import org.junit.rules.ExpectedException;
 
@@ -125,5 +130,5 @@ public class BillMakerTest{
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 }

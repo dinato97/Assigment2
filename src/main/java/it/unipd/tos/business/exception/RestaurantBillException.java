@@ -4,7 +4,9 @@
 
 package it.unipd.tos.business.exception;
 
+
 public class RestaurantBillException extends Throwable {
+
     private String message;
 
     public RestaurantBillException(String message) {
@@ -15,5 +17,4 @@ public class RestaurantBillException extends Throwable {
     public String getMessage() {
         return message;
     }
-
 }

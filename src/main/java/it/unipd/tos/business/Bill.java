@@ -42,6 +42,7 @@ public class Bill implements RestaurantBill {
         if (totale > 100) {
             totale *= 0.95;
         }
+
         return totale;
 
     }
